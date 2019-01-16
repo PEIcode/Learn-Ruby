@@ -11,8 +11,32 @@
     ·全局变量：类变量不能跨类使用。如果您想要有一个可以跨类使用的变量，您需要定义全局变量。全局变量总是以美元符号（$）开始
 =end
 class Album #类名首字母要大写
-    
-    adc = 123  #变量定义(小写字母和下划线开头)
-    _abc = 456
+    @@name = "album"
+    @adc = 123  #实例变量
+    _abc = 456 #局部变量(小写字母和下划线开头)
     Abc = 222 #常量定义 大写字母开头
+    def initialize(id, name, addr)
+        @a_id = id
+        @a_name = name
+        @a_addr = addr
+    end
+    def putAllNum
+        puts @a_id
+        puts @a_name
+        puts @a_addr
+    end
+    def putAllDetails() #s输出变量用#表示
+        puts "Album id #@a_id"
+        puts "Album name #@a_name"
+        puts "Album addr #@a_addr"
+    end
 end
+
+# album1 = Album. new
+# puts @adc, @@name
+
+#类的初始化以及调用方法
+album2 = Album.new("20153523", "lpz", "tianmen")
+# puts album2.@a_id
+album2.putAllNum
+album2.putAllDetails()
