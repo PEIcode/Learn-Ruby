@@ -46,6 +46,11 @@ end
 
 # '#{expr}' 可以替换任何字符串，expr可以是任意的Ruby表达式
 puts "相乘： #{20*3}"
+
+#范围类型
+(10..15).each do |n|
+    print n, ' '
+end
 #Ruby中 定义类
 class Album
     
