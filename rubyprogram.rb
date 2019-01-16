@@ -51,11 +51,4 @@ puts "相乘： #{20*3}"
 (10..15).each do |n|
     print n, ' '
 end
-#Ruby中 定义类
-class Album
-    
-    adc = 123  #变量定义(小写字母和下划线开头)
-    _abc = 456
-    Abc = 222 #常量定义 大写字母开头
-end
 
